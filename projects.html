@@ -1,0 +1,158 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Projects | Varshika Portfolio</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- Header -->
+    <header class="header">
+        <a href="index.html" class="logo">Varshika.</a>
+
+        <button id="menuToggle" class="menu-toggle"
+                type="button" aria-label="Open navigation menu"
+                aria-expanded="false">
+            ☰
+        </button>
+
+        <nav id="navigation">
+            <a href="index.html">Home</a>
+            <a href="about.html">About</a>
+            <a href="skills.html">Skills</a>
+            <a href="projects.html" class="active">Projects</a>
+            <a href="contact.html">Contact</a>
+        </nav>
+
+        <button id="themeToggle" class="theme-toggle"
+                type="button" aria-label="Switch to dark theme">
+            🌙
+        </button>
+    </header>
+
+    <!-- Projects Section -->
+    <main class="inner-page">
+
+        <section class="page-heading">
+            <p class="welcome-label">My Work ✨</p>
+            <h1>My Projects</h1>
+            <h2>Learning by Building</h2>
+            <p>
+                Here are some projects I have created while learning
+                HTML, CSS, and JavaScript.
+            </p>
+        </section>
+
+        <!-- Project Cards -->
+        <section class="projects-grid">
+
+            <!-- Image Slider -->
+            <article class="project-card" data-category="javascript">
+                <div class="project-icon">🖼️</div>
+
+                <h2>Image Slider</h2>
+
+                <p>
+                    An image slider that allows users to move between
+                    images using Next and Previous buttons.
+                </p>
+
+                <div class="project-details">
+                    <span>HTML</span>
+                    <span>CSS</span>
+                    <span>JavaScript</span>
+                </div>
+
+                <button class="btn"
+                        type="button"
+                        data-demo="slider">
+                    View Details
+                </button>
+            </article>
+
+            <!-- Digital Clock -->
+            <article class="project-card" data-category="javascript">
+                <div class="project-icon">⏰</div>
+
+                <h2>Digital Clock</h2>
+
+                <p>
+                    A digital clock that displays the current time
+                    and updates automatically every second.
+                </p>
+
+                <div class="project-details">
+                    <span>HTML</span>
+                    <span>CSS</span>
+                    <span>JavaScript</span>
+                </div>
+
+                <button class="btn"
+                        type="button"
+                        data-demo="clock">
+                    View Details
+                </button>
+            </article>
+
+        </section>
+
+        <!-- Project Details -->
+        <section id="projectDetails"
+                 class="project-details"
+                 hidden>
+
+            <h2 id="detailsTitle">Project Details</h2>
+
+            <p id="detailsText"></p>
+
+            <button id="closeDetails"
+                    class="btn"
+                    type="button">
+                Close
+            </button>
+        </section>
+
+        <!-- Contact Section -->
+        <section class="cta">
+            <h2>Want to Know More?</h2>
+
+            <p>
+                Visit my contact page to get in touch with me.
+            </p>
+
+            <a href="contact.html" class="btn">
+                Contact Me
+            </a>
+        </section>
+
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <h2>Varshika.</h2>
+
+        <p>Learning Today, Building Tomorrow 💜</p>
+
+        <div class="footer-divider">
+            Made with 💗
+        </div>
+
+        <p>
+            &copy; <span id="year"></span> Varshika.
+            All rights reserved.
+        </p>
+
+        <button id="backToTop"
+                class="back-to-top"
+                type="button">
+            ↑ Back to Top
+        </button>
+    </footer>
+
+    <script src="script.js"></script>
+
+</body>
+</html>
