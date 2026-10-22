@@ -1,0 +1,125 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact | Varshika Portfolio</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- Header -->
+    <header>
+        <h2 class="logo">Varshika</h2>
+
+        <button class="menu-toggle" id="menuToggle" type="button"
+                aria-label="Open navigation menu">☰</button>
+
+        <nav>
+            <a href="index.html">Home</a>
+            <a href="about.html">About</a>
+            <a href="skills.html">Skills</a>
+            <a href="projects.html">Projects</a>
+            <a href="contact.html" class="active">Contact</a>
+        </nav>
+
+        <button id="themeToggle" class="theme-toggle" type="button"
+                aria-label="Switch theme">🌙</button>
+    </header>
+
+    <!-- Contact Section -->
+    <main class="inner-page">
+
+        <section class="page-heading">
+            <p class="welcome-label">💌 Let's Connect</p>
+            <h1>Contact Me</h1>
+            <h2>I'd Love to Hear From You!</h2>
+            <p>
+                Have a question or an opportunity to share?
+                Feel free to contact me using the details below.
+            </p>
+        </section>
+
+        <section class="skills-grid">
+
+            <article class="skill-card">
+                <div class="skill-icon">📧</div>
+                <h2>Email</h2>
+                <p>Send me an email for questions or opportunities.</p>
+                <a class="btn primary-btn"
+                   href="25bit060@kgcas.com">
+                    Email Me
+                </a>
+            </article>
+
+            <article class="skill-card">
+                <div class="skill-icon">💻</div>
+                <h2>GitHub</h2>
+                <p>Explore my projects and source code.</p>
+                <a class="btn primary-btn"
+                   href="https://github.com/varshika-27"
+                   target="_blank"
+                   rel="noopener noreferrer">
+                    Visit GitHub
+                </a>
+            </article>
+
+            <article class="skill-card">
+                <div class="skill-icon">💼</div>
+                <h2>LinkedIn</h2>
+                <p>Connect with me professionally.</p>
+                <a class="btn primary-btn"
+                   href="https://www.linkedin.com/in/Varshika V"
+                   target="_blank"
+                   rel="noopener noreferrer">
+                    Connect
+                </a>
+            </article>
+
+        </section>
+    </main>
+    <footer class="footer">
+        <h2>Let's Stay Connected!</h2>
+        <p>Thank you for visiting my portfolio.</p>
+        <p class="copyright">
+            © <span id="year"></span> Varshika. All rights reserved.
+        </p>
+    </footer>
+
+    <script src="script.js"></script>
+
+    <script>
+        document.getElementById("year").textContent =
+            new Date().getFullYear();
+
+        document.getElementById("contactForm").addEventListener(
+            "submit", function(event) {
+                event.preventDefault();
+
+                const name = document.getElementById("name").value.trim();
+                const email = document.getElementById("email").value.trim();
+                const message = document.getElementById("message").value.trim();
+
+                const subject = encodeURIComponent(
+                    "Portfolio message from " + name
+                );
+
+                const body = encodeURIComponent(
+                    "Name: " + name +
+                    "\nEmail: " + email +
+                    "\n\nMessage:\n" + message
+                );
+
+                document.getElementById("formStatus").textContent =
+                    "Opening your email application...";
+
+                window.location.href =
+                    "mailto:your-email@example.com?subject=" +
+                    subject + "&body=" + body;
+            }
+        );
+    </script>
+
+</body>
+</html>
